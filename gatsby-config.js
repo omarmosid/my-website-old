@@ -13,8 +13,37 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/content/blog`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    
+    `gatsby-plugin-styled-components`,
+
+    /* Fonts */
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Quicksand`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Lora`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
+    },
+
+    /* Manifest */
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
