@@ -5,3 +5,10 @@
  */
 
 // You can delete this file if you're not using it
+
+const LogRocket = require('logrocket');
+
+exports.onClientEntry = () => {
+  console.log("We've started!")
+  LogRocket.init('evjced/omarmo');
+}
