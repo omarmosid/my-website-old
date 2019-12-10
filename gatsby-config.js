@@ -16,6 +16,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `portfolio`,
+        path: `${__dirname}/src/content/portfolio`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `blog`,
         path: `${__dirname}/src/content/blog`,
       },
@@ -40,7 +47,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     
+    // Styles
     `gatsby-plugin-styled-components`,
+
+    // SVG
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    },
 
     /* Fonts */
     {

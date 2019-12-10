@@ -6,13 +6,16 @@ const Container = styled.div`
   width: 100%;
   max-width: ${props => props.fullwidth ? '100%' : dimensions.siteWidth};
   padding: ${props => props.padding};
+  display: inline-block;
   background: ${props => props.background};
+  border: ${props => props.border};
 `
 
 Container.defaultProps = {
   fullwidth: false,
   padding: "0px",
-  background: 'transparent'
+  background: 'transparent',
+  border: 'none'
 }
 
 export default Container

@@ -8,40 +8,16 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import Navbar from "../navbar/navbar"
 import { lightTheme, darkTheme } from "../../../utils/themes"
 import { fonts } from "../../../utils/themes/styles"
 import Footer from "../footer/footer"
+import GlobalStyles from "../../../utils/themes/globalStyles"
 
-const GlobalLayout = createGlobalStyle`
-  html {
-    font-family: sans-serif;
-    font-size: 10px;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: ${props => props.theme.backgroundColor};
-    color: ${props => props.theme.headingTextColor};
-    font-family: ${fonts.sec};
-    h1, h2, h3, h4, h5, h6 {
-      font-family: ${fonts.pri};
-    }
-    h1 {
-      font-size: 48px;
-    }
-    a {
-      color: inherit;
-      font-family: ${fonts.pri};
-    }
-  }
-`
 const StyledLayout = styled.div`
   box-sizing: border-box;
+  position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -70,8 +46,7 @@ const Layout = ({ children }) => {
         theme={isDarkThemeActive ? darkTheme : lightTheme}
       >
         <StyledLayout>
-          <GlobalLayout />
-          <Navbar />
+          {/* <Navbar /> */}
           {/* <ThemeSwitch
             isDarkThemeActive={isDarkThemeActive}
             handleThemeChange={handleThemeChange}
@@ -79,6 +54,7 @@ const Layout = ({ children }) => {
           <main>{children}</main>
           <Footer />
         </StyledLayout>
+        <GlobalStyles />
       </ThemeProvider>
     </>
   )

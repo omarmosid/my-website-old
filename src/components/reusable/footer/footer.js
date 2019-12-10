@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
   box-sizing: border-box;
+  bottom: 0px;
   width: 100%;
   padding: 10px;
   display: flex;

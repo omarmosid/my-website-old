@@ -1,5 +1,5 @@
 export const darkTheme = {
-  backgroundColor: "#232323",
+  backgroundColor: "#191919",
   textColor: "#ededed",
   headingTextColor: "#fefefe"
 };

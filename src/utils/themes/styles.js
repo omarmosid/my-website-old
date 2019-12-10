@@ -5,7 +5,7 @@ export const dimensions = {
 
 export const colors = {
   pri: '#2575C2',
-  sec: '#FCF204'
+  sec: '#F3E10C'
 }
 
 export const fonts = {

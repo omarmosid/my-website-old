@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const StyledNavbar = styled.nav`
-  position: static;
+  position: fixed;
+  z-index: 100;
   top: 0px;
   left: 0px;
   box-sizing: border-box;
