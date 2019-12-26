@@ -9,14 +9,14 @@ import HomeSkillsSection from "../components/page/home/home-skills-section/home-
 
 const IndexPage = () => (
   <Layout>
-    <Parallax pages={1} scrolling={true}>
+    <Parallax pages={3} scrolling={true}>
       <SEO title="Home" />
-      <ParallaxLayer factor={1} offset={0} speed={0.3} style={{ position: 'fixed' }}>
+      <ParallaxLayer factor={1} offset={0} speed={0.6} style={{ position: 'fixed' }}>
         <img src="http://source.unsplash.com/rTZW4f02zY8/1600x900" alt="stars" style={{ position: 'fixed', zIndex: '0', width: '100%', height: '200vh', objectFit: 'cover', filter: 'brightness(40%)' }} />
       </ParallaxLayer>
       <HomeHero />
-      {/* <HomePortfolioSection />
-      <HomeSkillsSection /> */}
+      <HomePortfolioSection />
+      <HomeSkillsSection />
     </Parallax>
   </Layout>
 )

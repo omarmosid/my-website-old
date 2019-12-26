@@ -24,9 +24,12 @@ const StyledHomeSkillsSection = styled.section`
       ul {
         margin: 0px;
         padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         li {
-          margin: 0px;
           list-style: none;
+          font-size: 16px;
         }
       }
     }
@@ -44,14 +47,14 @@ const HomeSkillsSection = (props) => {
           <div className="column">
             <h3>Front-End</h3>
             <ul>
-              <li>React</li>
+              <li color="green">React</li>
               <li>Redux</li>
               <li>React</li>
               <li>React</li>
             </ul>
           </div>
           <div className="column">
-            <h3>Front-End</h3>
+            <h3>Back-End</h3>
             <ul>
               <li>React</li>
               <li>Redux</li>
