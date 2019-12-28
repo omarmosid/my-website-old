@@ -6,10 +6,11 @@ import Container from '../../../reusable/layout/container/container'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const StyledHomePortfolioSection = styled.section`
-position: relative;
+  position: relative;
   z-index: 2;
   width: 100%;
   max-width: ${dimensions.siteWidth};
+  height: 100vh;
   margin: 0 auto;
   div.header {
     h2 {

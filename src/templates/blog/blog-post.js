@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby';
 import Layout from '../../components/reusable/layout/layout';
 import Container from '../../components/reusable/layout/container/container';
+import PostBody from '../../components/page/blog/post/post-body/post-body';
 
 const BlogPost = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
@@ -9,12 +10,12 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <h1>{title}</h1>
-      <Container>
+      <PostBody>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </Container>
+      </PostBody>
     </Layout>
   )
 }

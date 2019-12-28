@@ -12,7 +12,7 @@ const StyledPortfolioItem = styled.div`
   width: 100%;
   max-width: 480px;
   margin: 20px 0px;
-  box-shadow: 0px 0px 10px rgba(252, 255, 255, 0.10);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.250);
   &:hover {
     filter: brightness(60%);
     transition: 0.4s all;

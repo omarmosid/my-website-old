@@ -29,7 +29,7 @@ const StyledLayout = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const [isDarkThemeActive, setDarkTheme] = useState(true);
+  const [isDarkThemeActive, setDarkTheme] = useState(false);
   const handleThemeChange = (checked) => {
     setDarkTheme(checked);
   }
@@ -40,11 +40,7 @@ const Layout = ({ children }) => {
       >
         <GlobalStyles />
         <StyledLayout>
-          {/* <Navbar /> */}
-          {/* <ThemeSwitch
-            isDarkThemeActive={isDarkThemeActive}
-            handleThemeChange={handleThemeChange}
-          /> */}
+          <Navbar />
           <main>{children}</main>
           <Footer />
         </StyledLayout>

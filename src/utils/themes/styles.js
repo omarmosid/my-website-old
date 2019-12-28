@@ -4,8 +4,15 @@ export const dimensions = {
 }
 
 export const colors = {
-  pri: '#2575C2',
-  sec: '#F3E10C'
+  pri: '#0AA6FE',
+  priLight: '#5CC4FE',
+  priDark: '#004E7A',
+  sec: '#133431',
+  secLight: '#348E86',
+  secDark: '#133431',
+  ter: '#ECC209',
+  danger: 'red',
+  dangerDark: 'darkred'
 }
 
 export const fonts = {

@@ -17,10 +17,20 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${fonts.sec};
     h1, h2, h3, h4, h5, h6 {
       margin-top: 0px;
+      color: ${colors.secDark};
       font-family: ${fonts.pri};
     }
+    span, label, p {
+      color: ${colors.secLight};
+      line-height: 150%;
+      letter-spacing: -0.2px;
+    }
     h1 {
-      font-size: 48px;
+      font-size: 52px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 300;
     }
     a {
       color: inherit;

@@ -2,33 +2,39 @@ import React from 'react'
 import styled from 'styled-components'
 import Container from '../../../reusable/layout/container/container'
 import { colors } from '../../../../utils/themes/styles'
-import Button from '../../../reusable/button/button'
+import { Button } from '../../../reusable/button'
 
 const StyledHomeHero = styled.section`
   box-sizing: border-box;
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   margin: 0px;
   display: flex;
   justify-content: center;
   .hero {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    h1, h2 {
+      text-align: center;
+    }
     h1 {
       margin: 0px;
       padding: 10px 14px;
       display: inline-block;
-      background: ${colors.sec};
-      color: #000;
+      color: ${colors.sec};
       border-radius: 15px;
-      font-size: 4rem;
+      font-size: 52px;
     }
     h2 {
+      max-width: 650px;
       margin-top: 10px;
+      color: ${colors.secLight};
+      font-size: 32px;
+      font-weight: 400;
     }
     button.cta {
       margin-top: 40px;
@@ -58,12 +64,10 @@ const HomeHero = (props) => {
         fullwidth={false}
         padding="6rem 20px 6rem"
       >
-        <h1>Omar Mohammad</h1>
-        <h2>Web Developer and UX Designer</h2>
+        <h1>Hi I'm Omar.</h1>
+        <h2>A Front-End Developer passionate about building great user-experiences.</h2>
         <a href="mailto:omar110894@gmail.com">
-          <Button
-            className="cta"
-          >Get in Touch</Button>
+          <Button.Default>Get in touch</Button.Default>
         </a>
       </Container>
     </StyledHomeHero>
