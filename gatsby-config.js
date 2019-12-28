@@ -66,7 +66,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Quicksand`,
+            family: `Work Sans`,
             variants: [`400`, `700`]
           },
           {

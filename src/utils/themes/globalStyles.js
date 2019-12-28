@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
       font-family: ${fonts.pri};
     }
     span, label, p {
+      font-family: ${fonts.pri};
       color: ${colors.secLight};
       line-height: 150%;
       letter-spacing: -0.2px;

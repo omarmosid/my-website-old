@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import Container from '../../../../reusable/layout/container/container'
+import React from "react"
+import styled from "styled-components"
+import Container from "../../../../reusable/layout/container/container"
 
 const StyledPostBody = styled.div`
   div.blog-post-content {
@@ -9,20 +9,14 @@ const StyledPostBody = styled.div`
   }
 `
 
-const PostBody = ({
-  children
-}) => {
+const PostBody = ({ children }) => {
   return (
     <StyledPostBody>
-      <Container>
-        {children}
-      </Container>
+      <Container>{children}</Container>
     </StyledPostBody>
   )
 }
 
-PostBody.defaultProps = {
-
-}
+PostBody.defaultProps = {}
 
 export default PostBody
