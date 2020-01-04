@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import Container from '../../../reusable/layout/container/container'
 import { colors } from '../../../../utils/themes/styles'
 import { Button } from '../../../reusable/button'
+import { Link } from 'gatsby'
+
+import Back from '../../../../images/tiles/geometry/geometry.png'
 
 const StyledHomeHero = styled.section`
   box-sizing: border-box;
@@ -13,6 +16,7 @@ const StyledHomeHero = styled.section`
   margin: 0px;
   display: flex;
   justify-content: center;
+  /* background: url(${Back}) repeat center center; */
   .hero {
     display: flex;
     flex-direction: column;
@@ -65,10 +69,10 @@ const HomeHero = (props) => {
         padding="6rem 20px 6rem"
       >
         <h1>Hi I'm Omar.</h1>
-        <h2>A Front-End Developer passionate about building great user-experiences.</h2>
-        <a href="mailto:omar110894@gmail.com">
+        <h2>A Full-Stack Developer passionate about building great user-experiences.</h2>
+        <Link to="/contact">
           <Button.Default>Get in touch</Button.Default>
-        </a>
+        </Link>
       </Container>
     </StyledHomeHero>
   )

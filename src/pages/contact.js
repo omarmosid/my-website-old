@@ -1,10 +1,15 @@
 import React from 'react'
 import Layout from '../components/reusable/layout/layout'
+import ContactFormSection from '../components/page/contact/contact-form-section/contact-form-section'
+import Hero from '../components/reusable/hero/hero'
 
 const Contact = () => {
   return (
     <Layout>
-      <h1>Contact Page</h1>
+      <Hero 
+        title="Get in Touch"
+      />
+      <ContactFormSection />
     </Layout>
   )
 }

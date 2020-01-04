@@ -1,13 +1,11 @@
 import styled from 'styled-components'
-import { textSizes, colors } from '../../../../../utils/themes/styles'
+import { colors, textSizes } from '../../../../../utils/themes/styles';
 
-const Input = styled.input`
-  /* Dimensions */
+const Textarea = styled.textarea`
   box-sizing: border-box;
-  height: 54px;
-  max-width: ${props => props.fullwidth ? '100%' : '320px'};
+  height: 400px;
   width: 100%;
-  padding: 0 10px;
+  padding: 10px 10px;
 
   /* Colors */
   color: ${colors.sec};
@@ -41,9 +39,9 @@ const Input = styled.input`
   }
 `
 
-Input.defaultProps = {
-  fullwidth: true,
+Textarea.defaultProps = {
+  fullwidth: false,
   status: 'normal'
 }
 
-export default Input
+export default Textarea

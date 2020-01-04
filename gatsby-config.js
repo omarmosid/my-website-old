@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Omars Website`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@omarmosid`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,9 +36,6 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
               maxWidth: 1100,
             },
           },

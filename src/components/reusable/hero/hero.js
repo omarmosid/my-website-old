@@ -9,22 +9,11 @@ const StyledHero = styled.div`
   justify-content: center;
   align-items: center;
   background-image: ${props => props.background};
-  background-color: ${colors.pri};
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-size: cover;
-  clip-path: ellipse(100% 55% at 48% 44%);
+  background: ${colors.priGradient};
   > * {
     position: relative;
     z-index: 2;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
   }
 `
 

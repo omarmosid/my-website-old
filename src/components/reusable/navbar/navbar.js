@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import useScrollPosition from '../../hooks/useScrollPosition'
 
 const StyledNavbar = styled.nav`
   position: fixed;
@@ -13,7 +14,8 @@ const StyledNavbar = styled.nav`
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  background: transparent;
+  background: ${props => props.isScrolled ? '#fff' : 'transparent'};
+  box-shadow: ${props => props.isScrolled ? '0px 2px 6px rgba(0, 0, 0, 0.25)' : 'transparent'};
   a {
     text-decoration: none;
   }
@@ -42,8 +44,16 @@ const StyledNavbar = styled.nav`
 `
 
 const Navbar = (props) => {
+  const [isScrolled, setScrollStatus] = useState(false);
+  useScrollPosition(({ prevPos, currPos }) => {
+    if(currPos.y < 0) {
+      setScrollStatus(true);
+    } else if(currPos.y >= 0) {
+      setScrollStatus(false);
+    }
+  });
   return (
-    <StyledNavbar>
+    <StyledNavbar isScrolled={isScrolled}>
       <div className="container__logo">
         <Link to="/">
           Omar

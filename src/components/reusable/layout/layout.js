@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 import styled, { ThemeProvider } from "styled-components"
 import Navbar from "../navbar/navbar"
 import { lightTheme, darkTheme } from "../../../utils/themes"
-import { fonts } from "../../../utils/themes/styles"
 import Footer from "../footer/footer"
 import GlobalStyles from "../../../utils/themes/globalStyles"
 
@@ -44,7 +43,6 @@ const Layout = ({ children }) => {
           <main>{children}</main>
           <Footer />
         </StyledLayout>
-        <GlobalStyles />
       </ThemeProvider>
     </>
   )

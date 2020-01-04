@@ -9,12 +9,16 @@ export const colors = {
   pri: '#0AA6FE',
   priLight: '#5CC4FE',
   priDark: '#004E7A',
+  priGradient: 'linear-gradient(180deg, rgba(92,196,254,1) 0%, rgba(10,166,254,1) 100%)',
+  priTrans: 'rgba(10,166,254, 0.50)',
+
   sec: '#133431',
   secLight: '#348E86',
   secDark: '#133431',
-  ter: '#ECC209',
-  terLight: '',
-  terDark: '',
+
+  ter: '##F9DD60',
+  terLight: '#FDF2C4',
+  terDark: '#ECC209',
 
   lightest: '#E6E6E6',
   lighter: '#CCCCCC',
@@ -29,7 +33,10 @@ export const colors = {
   success: '#4BD37B',
   successDark: '',
   error: '#FF5A79',
-  errorDark: 'darkred'
+  errorDark: 'darkred',
+
+  priGradient: 'linear-gradient(180deg, rgba(92,196,254,1) 0%, rgba(10,166,254,1) 100%)',
+  priGlow: 'rgba(10,166,254, 0.55)',
 }
 
 export const fonts = {

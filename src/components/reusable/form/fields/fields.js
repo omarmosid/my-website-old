@@ -1,24 +1,33 @@
 import React from "react"
 import styled from "styled-components"
-import Label from "./label/label"
-import Input from "./input/input"
-import Helper from "./helper/helper"
 
 const StyledFields = styled.div`
+  box-sizing: border-box;
+  width:  ${props => props.fullwidth ? '100%' : '50%'};
+  margin: 10px 0px;
   display: flex;
   flex-direction: column;
+  &:nth-child(odd) {
+    padding-right: ${props => props.fullwidth ? '0px' : '20px'};
+  }
+  &:nth-child(even) {
+    padding-left: ${props => props.fullwidth ? '0px' : '20px'};
+  }
 `
 
-const Fields = ({
-  children
-}) => {
+const Fields = (props) => {
+  console.log(props);
   return (
-    <StyledFields>
-      {children}
+    <StyledFields
+      {...props}
+    >
+      {props.children}
     </StyledFields>
   )
 }
 
-Fields.defaultProps = {}
+Fields.defaultProps = {
+  fullwidth: false
+}
 
 export default Fields
