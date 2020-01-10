@@ -8,16 +8,17 @@ const StyledMetaCard = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: #454545;
-  border: 2px solid #fff;
+  justify-content: flex-start;
+  background: #fff;
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   h4.title {
     margin: 0;
     margin-bottom: 10px;
     font-size: 24px;
   }
-  span.body {
-    font-size: 16px;
+  span, span.body {
+    font-size: 14px;
   }
 `
 

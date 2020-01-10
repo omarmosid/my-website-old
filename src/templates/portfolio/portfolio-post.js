@@ -1,20 +1,28 @@
-import React from 'react'
-import Layout from '../../components/reusable/layout/layout'
-import Hero from '../../components/reusable/hero/hero'
-import PortfolioSummary from '../../components/page/portfolio/portfolio-summary/portfolio-summary'
-import PortfolioMain from '../../components/page/portfolio/portfolio-main/portfolio-main'
+import React from "react"
+import Layout from "../../components/reusable/layout/layout"
+import Hero from "../../components/reusable/hero/hero"
+import PortfolioSummary from "../../components/page/portfolio/portfolio-summary/portfolio-summary"
+import PortfolioMain from "../../components/page/portfolio/portfolio-main/portfolio-main"
+import SEO from "../../components/reusable/seo/seo"
 
 const PortfolioPost = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
-  const { title, featuredImage } = frontmatter;
+  const { title, client, stack, period, demoLink, featuredImage } = frontmatter;
+  console.log(demoLink)
   return (
     <Layout>
-      <Hero
+      <SEO 
         title={title}
-        background={`url('${featuredImage.publicURL}')`}
       />
-      <PortfolioSummary />
-      <PortfolioMain>
+      <Hero title={title} background={`url('${featuredImage.publicURL}')`} />
+      <PortfolioSummary 
+        client={client}
+        stack={stack}
+        period={period}
+      />
+      <PortfolioMain
+        demoLink={demoLink}
+      >
         <div
           className="text"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -30,6 +38,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        client
+        stack
+        period
+        demoLink
         featuredImage {
           publicURL
           childImageSharp {

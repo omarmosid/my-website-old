@@ -3,15 +3,14 @@ import styled from 'styled-components'
 import Img from "gatsby-image"
 
 import { Link } from 'gatsby'
-import { colors } from '../../../../../utils/themes/styles'
 
 const StyledPortfolioItem = styled.div`
   position: relative;
   overflow: hidden;
-  height: 320px;
-  width: 100%;
-  max-width: 480px;
-  margin: 20px 0px;
+  height: 360px;
+  width: 33.33%;
+  /* width: 100%; */
+  /* flex: 1 1 33.33%; */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.250);
   &:hover {
     filter: brightness(60%);

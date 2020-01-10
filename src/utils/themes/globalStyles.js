@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     ${'' /* background: ${props => props.theme.backgroundColor}; */}
     background: url(${Back}) repeat center center;
+    background-attachment: fixed;
     color: ${props => props.theme.headingTextColor};
     font-family: ${fonts.sec};
     h1, h2, h3, h4, h5, h6 {
@@ -24,6 +25,12 @@ const GlobalStyles = createGlobalStyle`
       font-family: ${fonts.pri};
       letter-spacing: 0.02px;
     }
+    h1 { font-size: 51px };
+    h2 { font-size: 42px };
+    h3 { font-size: 33px };
+    h4 { font-size: 26px };
+    h5 { font-size: 20px };
+    h6 { font-size: 16px };
     span, label, p {
       font-family: ${fonts.pri};
       color: ${colors.secLight};
@@ -40,6 +47,14 @@ const GlobalStyles = createGlobalStyle`
     a {
       color: inherit;
       font-family: ${fonts.pri};
+    }
+    a {
+      text-decoration: none;
+    }
+    button {
+      cursor: pointer;
+      font-family: ${fonts.pri};
+      font-weight: 400;
     }
   }
 `

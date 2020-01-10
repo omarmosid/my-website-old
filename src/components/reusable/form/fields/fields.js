@@ -16,7 +16,6 @@ const StyledFields = styled.div`
 `
 
 const Fields = (props) => {
-  console.log(props);
   return (
     <StyledFields
       {...props}

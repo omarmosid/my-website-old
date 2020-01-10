@@ -8,6 +8,9 @@ const Default = styled.button`
   padding: 10px 26px;
   font-size: 18px;
 
+  display: flex;
+  align-items: center;
+
   /* Colors/Borders */
   background: ${props => {
     if(props.intent === 'primary') {
@@ -23,6 +26,14 @@ const Default = styled.button`
 
   /* Type */
   font-weight: bold;
+  line-height: 100%;
+
+  /* SVG */
+  svg {
+    padding-left: 10px;
+    height: 20px;
+    width: 20px;
+  }
 
   &:hover {
     background: ${props => {

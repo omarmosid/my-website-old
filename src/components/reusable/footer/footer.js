@@ -5,9 +5,12 @@ const StyledFooter = styled.footer`
   box-sizing: border-box;
   bottom: 0px;
   width: 100%;
+  height: 50px;
   padding: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: #dfdfdf;
 `
 
 const Footer = (props) => {

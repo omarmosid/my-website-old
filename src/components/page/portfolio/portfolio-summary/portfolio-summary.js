@@ -5,7 +5,7 @@ import Container from '../../../reusable/layout/container/container'
 import MetaCard from './meta-card/meta-card'
 
 const StyledPortfolioSummary = styled.section`
-  padding: 60px 0px 60px;
+  padding: 60px 0px 80px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -16,6 +16,9 @@ const StyledPortfolioSummary = styled.section`
 `
 
 const PortfolioSummary = ({
+  client, 
+  stack, 
+  period,
   children
 }) => {
   return (
@@ -25,17 +28,17 @@ const PortfolioSummary = ({
           <MetaCard 
             title="Client"
           >
-            <span>Montaigne Smart Business Solutions</span>
+            <span>{client}</span>
           </MetaCard>
           <MetaCard 
             title="Tech Stack"
           >
-            <span>Montaigne Smart Business Solutions</span>
+            <span>{stack}</span>
           </MetaCard>
           <MetaCard 
             title="Period"
           >
-            <span>Montaigne Smart Business Solutions</span>
+            <span>{period}</span>
           </MetaCard>
         </Row>
       </Container>

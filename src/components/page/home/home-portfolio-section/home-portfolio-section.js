@@ -10,12 +10,11 @@ const StyledHomePortfolioSection = styled.section`
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 100vh;
+  height: auto;
   margin: 0 auto;
+  padding: 6rem 0 4rem;
   display: flex;
   align-items: center;
-  background: url("https://source.unsplash.com/aJTiW00qqtI/1280x720") no-repeat
-    center;
   background-size: cover;
   background-attachment: fixed;
   div.header {
@@ -25,15 +24,16 @@ const StyledHomePortfolioSection = styled.section`
       margin: 0px 0px 10px;
       text-align: center;
       font-size: 24px;
+      color: ${colors.sec};
     }
   }
   div.container__portfolio {
     position: relative;
     z-index: 4;
-    padding: 40px 0px;
+    padding: 4rem 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
   div.container__cta {
     position: relative;
@@ -41,14 +41,14 @@ const StyledHomePortfolioSection = styled.section`
     display: flex;
     justify-content: center;
   }
-  &::after {
+  /* &::after {
     content: "";
     position: absolute;
     z-index: 3;
     height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.95);
-  }
+  } */
 `
 
 const HomePortfolioSection = props => {
@@ -56,7 +56,8 @@ const HomePortfolioSection = props => {
     query MyQuery {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/portfolio/" } }
-        limit: 4
+        limit: 6
+        sort: { fields: frontmatter___displayImage___birthtime, order: DESC }
       ) {
         edges {
           node {
@@ -80,7 +81,7 @@ const HomePortfolioSection = props => {
   const { edges } = data.allMarkdownRemark
   return (
     <StyledHomePortfolioSection>
-      <Container>
+      <Container fullwidth={true}>
         <div className="header">
           <h2>Projects I've worked on</h2>
         </div>

@@ -6,7 +6,12 @@ const Test = () => {
   const [input, setInput] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(input)
+    console.log(input);
+    axios.post('http://localhost:8080/newsletter/subscribe', {
+      name: input
+    })
+    .then((res) => console.log(res))
+    .catch(err => console.log(err))
   }
   const handleChange = (e) => {
     setInput(e.target.value);
